@@ -6,9 +6,10 @@ import {FormsModule} from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { accountRoutes } from './account.route';
+import { AccountsListComponent } from './account-list.component';
 @NgModule({
     declarations:[
-       AccountComponent
+       AccountComponent, AccountsListComponent
     ],
     imports:[
        BrowserModule,
@@ -17,7 +18,7 @@ import { accountRoutes } from './account.route';
        RouterModule.forChild(accountRoutes)
     ],
     exports:[
-        AccountComponent, RouterModule
+        AccountComponent, AccountsListComponent, RouterModule
     ],
     bootstrap:[],
     providers:[AccountService]

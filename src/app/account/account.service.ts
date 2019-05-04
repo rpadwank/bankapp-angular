@@ -7,8 +7,12 @@ import { Observable } from 'rxjs';
 export class AccountService{
    
     baseUrl = "http://localhost:8080";
-    headers = new HttpHeaders({'Access-Control-Allow-Origin' : '*'})
+    headers = new HttpHeaders({'Access-Control-Allow-Origin' : 'baseUrl'})
     constructor( private http:HttpClient){}
+
+    getAllAccounts(){
+        return this.http.get<BankAccount[]>(this.baseUrl+"/account");
+    }
 
     addNewAccount(account:BankAccount):Observable<BankAccount>{
         console.log(account);

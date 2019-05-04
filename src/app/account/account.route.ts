@@ -1,6 +1,6 @@
 import { Routes } from "@angular/router";
-import { AccountComponent } from './account.component';
+import { AccountsListComponent } from './account-list.component';
 
 export const accountRoutes : Routes=[
-   {path: "home", component:AccountComponent}
+   {path: "accounts", component:AccountsListComponent}
 ]

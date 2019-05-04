@@ -7,17 +7,19 @@ import {AccountService} from './account.service';
     // selector:"account-component"
 })
 export class AccountComponent implements OnInit{
-  accounts:BankAccount;
+  account:BankAccount;
 
   constructor(private accountService: AccountService){}
   ngOnInit(){
-      this.accounts= new BankAccount();
+      this.account= new BankAccount();
   }
+
+  
 
   addNewAccount(){
       alert("method");
-        console.log(this.accounts);
-      this.accountService.addNewAccount(this.accounts).subscribe((data)=>{
+        console.log(this.account);
+      this.accountService.addNewAccount(this.account).subscribe((data)=>{
            console.log("success");
            if(data!=null){
               alert("done");
