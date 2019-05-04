@@ -4,6 +4,8 @@ import { AccountService } from './account.service';
 import { BrowserModule } from '@angular/platform-browser';
 import {FormsModule} from '@angular/forms'
 import { HttpClientModule } from '@angular/common/http';
+import { RouterModule } from '@angular/router';
+import { accountRoutes } from './account.route';
 @NgModule({
     declarations:[
        AccountComponent
@@ -11,10 +13,11 @@ import { HttpClientModule } from '@angular/common/http';
     imports:[
        BrowserModule,
        FormsModule,
-       HttpClientModule
+       HttpClientModule, 
+       RouterModule.forChild(accountRoutes)
     ],
     exports:[
-        AccountComponent
+        AccountComponent, RouterModule
     ],
     bootstrap:[],
     providers:[AccountService]

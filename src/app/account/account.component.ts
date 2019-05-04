@@ -15,13 +15,14 @@ export class AccountComponent implements OnInit{
   }
 
   addNewAccount(){
-      console.log(this.accounts);
+      alert("method");
+        console.log(this.accounts);
       this.accountService.addNewAccount(this.accounts).subscribe((data)=>{
            console.log("success");
            if(data!=null){
               alert("done");
               
            }
-      })
+      });
   }
 }

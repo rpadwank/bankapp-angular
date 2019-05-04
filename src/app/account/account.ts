@@ -1,7 +1,6 @@
 export class BankAccount{
     accountHolderName:string;
-    accountNumber:number;
-    accountBalance:number;
+     accountBalance:number;
     accountType:string;
     
 }

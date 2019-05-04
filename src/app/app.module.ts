@@ -3,9 +3,10 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { AccountModule } from './account/account.module';
-import { RouterModule } from '@angular/router';
-import { appRoutes } from './app.route';
+
 import { FormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { AccountComponent } from './account/account.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,11 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
    AccountModule,
    FormsModule,
-   RouterModule.forRoot(appRoutes)
+   RouterModule.forRoot(
+    [
+      { path: "", component: AccountComponent}
+    ]
+  )
   ],
   providers: [],
   bootstrap: [AppComponent]
