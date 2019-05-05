@@ -7,6 +7,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { accountRoutes } from './account.route';
 import { AccountsListComponent } from './account-list.component';
+import { TransactionModule } from '../transaction/transaction.module';
 @NgModule({
     declarations:[
        AccountComponent, AccountsListComponent
@@ -15,6 +16,7 @@ import { AccountsListComponent } from './account-list.component';
        BrowserModule,
        FormsModule,
        HttpClientModule, 
+       TransactionModule,
        RouterModule.forChild(accountRoutes)
     ],
     exports:[

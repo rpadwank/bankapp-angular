@@ -7,7 +7,7 @@ import { Observable } from 'rxjs';
 export class AccountService{
    
     baseUrl = "http://localhost:8080";
-    headers = new HttpHeaders({'Access-Control-Allow-Origin' : 'baseUrl'})
+    headers = new HttpHeaders({'Access-Control-Allow-Origin' : '*'})
     constructor( private http:HttpClient){}
 
     getAllAccounts(){
